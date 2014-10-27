@@ -8,10 +8,11 @@ It's licensed as Open-Source under GNU GPL v2 and is free to use and modify unde
 Some of the features presented in the concept are not fully implemented yet so this software will grow
 and develop in the future according to my free-time.
 
+-- 10/27/14 --
 
-*****
+
 Usage-Instructions
-***
+------------------
 
 Due to the unfinished and prototypical character no deployment to a ready-to-use package-file was made yet.
 All dependencies and libraries are managed via Maven. The corresponding `pom.xml` is included. In order to
@@ -27,6 +28,3 @@ I am using the following setup at the moment which should work fine for this cas
 
 A detailed instruction to import and use this project with the mentioned setup will follow.
 
-
-
--- 10/27/14 --
