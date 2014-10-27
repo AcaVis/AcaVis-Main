@@ -18,8 +18,8 @@ To use AcaVis, the project should be imported to an IDE and started from there.
 I am using the following setup at the moment which should work fine for this case:
 
 - Oracle Java 7
-- Eclipse Luna IDE
-- Spring-Tool-Suite (Eclipse-Integration)
+- Eclipse Java EE IDE for Web Developers (Luna - Version 4.4)
+- Spring IDE (Eclipse-Integration)
 - Apache Tomcat 7 Webserver
 
 A detailed instruction to import and use this project with the mentioned setup will follow.
