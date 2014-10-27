@@ -14,11 +14,14 @@ Usage-Instructions
 ***
 
 Due to the unfinished and prototypical character no deployment to a ready-to-use package-file was made yet.
+All dependencies and libraries are managed via Maven. The corresponding `pom.xml` is included. In order to
+build the application all depedencies have to be grabbed and resolved by Maven first.
 To use AcaVis, the project should be imported to an IDE and started from there.
 I am using the following setup at the moment which should work fine for this case:
 
 - Oracle Java 7
 - Eclipse Java EE IDE for Web Developers (Luna - Version 4.4)
+- Maven 2 Eclipse (Usually included)
 - Spring IDE (Eclipse-Integration)
 - Apache Tomcat 7 Webserver
 
