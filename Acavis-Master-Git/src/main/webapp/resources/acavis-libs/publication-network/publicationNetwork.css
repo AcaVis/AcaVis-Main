@@ -1,0 +1,103 @@
+.publicationNetwork {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.publicationNetwork .axis {
+	font: 12px sans-serif;
+	fill: #000;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.publicationNetwork .axis path,
+.publicationNetwork .axis line {
+	fill: none;
+	stroke: #BCBCBC;
+	shape-rendering: crispEdges;
+}
+
+.publicationNetwork .scrollpad {
+	fill: transparent;
+	cursor: move;
+}
+
+.publicationNetwork .grid .tick {
+	stroke: #EBEBEB;
+}
+
+.publicationNetwork .grid path {
+	stroke-width: 0;
+}
+
+.publicationNetwork .link {
+	stroke: #E3E3E3;
+	stroke-width: 1.5px;
+}
+
+.publicationNetwork .link.highlighted {
+	stroke: #AAA;
+	stroke-width: 2px;
+}
+
+.publicationNetwork .link.reference {
+	stroke: lightgreen;
+	stroke-width: 2px;
+}
+
+.publicationNetwork .link.citation {
+	stroke: lightskyblue;
+	stroke-width: 2px;
+}
+
+.publicationNetwork .link.silent {
+	stroke-opacity: 0.7;
+	stroke-width: 1px;
+}
+
+.publicationNetwork .node {
+	cursor: pointer;
+	stroke-width: 1.5px;
+}
+
+.publicationNetwork .node.unclustered circle {
+	fill: #999 !important;
+	stroke: #666 !important;
+}
+
+.publicationNetwork .node.cited > .node-label,
+.publicationNetwork .node.referencing > .node-label,
+.publicationNetwork .node.root > .node-label {
+	font-size: 14px;
+}
+
+.publicationNetwork .node.silent {
+	opacity: 0.25;
+}
+
+.publicationNetwork .node-label {
+	cursor: pointer;
+	font: 12px sans-serif;
+	font-weight: bold;
+	fill: #000;
+	stroke: none;
+	text-anchor: middle;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.publicationNetwork  .node-label.hidden  {
+	display: none;
+}

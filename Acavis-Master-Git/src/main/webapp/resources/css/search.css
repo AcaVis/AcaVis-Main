@@ -1,0 +1,173 @@
+/*
+  Search Layout
+*/
+.searchresults-headcolumn {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.searchform {
+	margin: 0 auto 40px;
+	max-width: 800px;
+}
+
+.searchform ~ .searchform-alert {
+	margin:-20px auto 40px;
+	max-width: 800px;
+}
+
+.searchform-landing {
+	margin: 120px auto 10px;
+	max-width: 85%;
+}
+
+.searchform-landing ~ .searchform-alert {
+	margin: 0 auto 20px;
+	max-width: 80%;
+}
+
+.searchinput {
+}
+
+.searchinput-btn {
+    display: table-cell;
+    font-size: 0;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 1%;
+}
+
+.searchinput-group {
+    border-collapse: separate;
+    display: table;
+    position: relative;
+}
+
+.searchinput-btn > .btn {
+	margin-left: 0.3em;
+}
+
+.searchresults-management {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.searchpagination {
+	text-align: center;
+}
+
+.searchresults {
+	list-style: none;
+	padding-left: 0;
+}
+
+.searchresults > li {
+	list-style: none;
+	padding: 1em 1em 1em;
+	position: relative;
+}
+
+.searchresults > li > .selection {
+	display: block;
+	height: 32px;
+	left: -30px;
+	padding-top: 2px;
+	position: absolute;
+	text-align: center;
+	top: 2px;
+	width: 32px;
+}
+
+
+.searchresult-metricwrapper {
+	display: block;
+	left: -30px;
+	position: absolute;
+	text-align: center;
+	top: 32px;
+	width: 30px;
+}
+
+.searchresult-metric {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.searchresult-title {
+	/* adjust first and last elements margin */
+	margin-top: 0;
+}
+
+.searchresult-authors {
+	margin-bottom: 0.1em;
+}
+
+.searchresult-meta-source:last-child,
+.searchresult-actionbar:last-child {
+	/* adjust first and last elements margin */
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+
+
+/*
+  Search Design
+*/
+.searchresults {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.searchresults > li {
+	border-top: 1px solid #ddd;
+	border-left: 26px solid #ddd;
+	border-right: 0.3em solid #ddd;
+}
+
+.searchresults > li:nth-child(2n+1) {
+	background-color: #f9f9f9;
+}
+
+.searchresults > li:first-child {
+	border-top: 0;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.searchresults > li:last-child {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.searchresults > li.incollection {
+	background-color: #fffce6;
+	border-left-color: #FBD05C;
+	border-right-color: #FBD05C;
+}
+
+.searchresults > li > .selection,
+.searchresults > li > .selection > input {
+	cursor: pointer;
+}
+
+.searchresult-metric {
+	background-color: #777;
+	border-radius: 4px 0 0 4px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+	color: #fff;
+	min-width: 34px;
+	padding: 0.2em 0.4em;
+}
+
+.searchresult-metric > .metricvalue {
+	font-size: 1.8em;
+	font-weight: bold;
+	line-height: 1em;
+}
+
+.searchresult-metric > .metricname {
+	font-size: 0.75em;
+}

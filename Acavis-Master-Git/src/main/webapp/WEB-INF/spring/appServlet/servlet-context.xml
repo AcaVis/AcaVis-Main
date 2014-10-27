@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:security="http://www.springframework.org/schema/security"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	<beans:bean id="applicationContextProvider" class="de.kbs.acavis.service.controller.ApplicationContextProvider"></beans:bean>
+	
+	<context:component-scan base-package="de.kbs.acavis.presentation.controller, de.kbs.acavis.service" />
+	
+	<interceptors>
+	    <beans:bean class="de.kbs.acavis.presentation.controller.NavigationInterceptor" autowire="constructor" />
+	</interceptors>
+
+	<!-- Database -->
+
+    <context:annotation-config />
+    <tx:annotation-driven />
+    
+	<beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <beans:property name="driverClassName" value="org.hsqldb.jdbcDriver" />
+        <!-- <beans:property name="url" value="jdbc:hsqldb:file:N:/Abschlussarbeit/db/acavis;hsqldb.write_delay=false;shutdown=true" /> -->
+        <!-- That is currently in the eclipse directory or the directory where the java command was executed -->
+        <beans:property name="url" value="jdbc:hsqldb:file:src/acavis-db/acavis;hsqldb.write_delay=false;shutdown=true" />
+        <beans:property name="username" value="sa" />
+        <beans:property name="password" value="" />
+    </beans:bean>
+    
+    <beans:bean id="entityManagerFactory"
+        class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <beans:property name="dataSource" ref="dataSource" />
+        <beans:property name="persistenceUnitName" value="acavis" />
+        <!-- <beans:property name="packagesToScan">
+        	<beans:list>
+        		<beans:value>de.kbs.acavis.service.controller</beans:value>
+        		<beans:value>de.kbs.acavis.service.model.persistence</beans:value>
+        	</beans:list>
+        </beans:property>-->
+        <beans:property name="jpaVendorAdapter">
+            <beans:bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+        </beans:property>
+        <beans:property name="jpaProperties">
+            <beans:props>
+                <beans:prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</beans:prop>
+                <beans:prop key="hibernate.show_sql">true</beans:prop>
+                <beans:prop key="hibernate.format_sql">true</beans:prop>
+                <beans:prop key="hibernate.hbm2ddl.auto">update</beans:prop>
+            </beans:props>
+        </beans:property>
+    </beans:bean>
+ 
+    <beans:bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <beans:property name="entityManagerFactory" ref="entityManagerFactory" />
+    </beans:bean>
+    
+</beans:beans>

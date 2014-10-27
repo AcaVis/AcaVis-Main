@@ -1,0 +1,112 @@
+/*
+  Yearly Histogram implementing barchart and linechart with dots
+*/
+.yearlyHistogram {
+}
+
+.yearlyHistogram .axis {
+	font: 12px sans-serif;
+}
+
+.yearlyHistogram .axis path,
+.yearlyHistogram .axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.yearlyHistogram .line {
+	fill: none;
+	stroke: steelblue;
+	stroke-width: 1.5px;
+}
+
+.yearlyHistogram .datadot {
+	cursor: pointer;
+	fill: steelblue;
+	stroke: slategray;
+	stroke-width: 0.8px;
+}
+
+.yearlyHistogram .datadot:hover {
+	stroke: gray;
+}
+
+.yearlyHistogram .bar {
+	cursor: pointer;
+	fill: steelblue;
+}
+
+.yearlyHistogram .bar:hover {
+	stroke: gray;
+	stroke-width: 0.8px;
+}
+
+.yearlyHistogram .bar.null {
+	fill: lightsteelblue;
+}
+
+.yearlyHistogram text {
+	cursor: default;
+}
+
+
+/*
+  General - D3 Tooltip
+*/
+.d3-tip {
+  line-height: 1;
+  padding: 0.3em 0.6em;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  border-radius: 2px;
+  pointer-events: none;
+  /* High z-index to get on top of modals *sigh* */
+  z-index: 10000;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Northward tooltips */
+.d3-tip.n:after {
+  content: "\25BC";
+  margin: -2px 0 0 0;
+  top: 100%;
+  left: 0;
+  text-align: center;
+}
+
+/* Eastward tooltips */
+.d3-tip.e:after {
+  content: "\25C0";
+  margin: -4px 0 0 0;
+  top: 50%;
+  left: -8px;
+}
+
+/* Southward tooltips */
+.d3-tip.s:after {
+  content: "\25B2";
+  margin: 0 0 1px 0;
+  top: -8px;
+  left: 0;
+  text-align: center;
+}
+
+/* Westward tooltips */
+.d3-tip.w:after {
+  content: "\25B6";
+  margin: -4px 0 0 -1px;
+  top: 50%;
+  left: 100%;
+}

@@ -1,0 +1,143 @@
+/*
+  General Layout
+*/
+body {
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+
+/*
+  Navigation
+*/
+.navbar {
+	margin-bottom: 0;
+}
+
+.navbar-xs {
+	min-height: 24px;
+} 
+.navbar-xs .navbar-brand {
+	padding: 5px 10px;
+	font-size: 15px;
+	height: auto;
+	line-height: 14px;
+}
+
+.navbar-xs a.navbar-brand {
+	background-image: linear-gradient(to bottom, #eb7f2c 0px, #93480f 100%);
+    box-shadow: 0 1px 3px rgba(167, 68, 20, 0.75);
+	border-bottom: 1px solid #5F4029;
+	border-left: 1px solid #935526;
+	border-right: 1px solid #935526;
+	border-top: 1px solid #9D6A43;
+	color: #FFF;
+	margin-bottom: -1px;
+	margin-top: -1px;
+	text-shadow: 0 1px 0 rgba(205, 104, 27, 0.75);
+}
+
+.navbar-xs a.navbar-brand:hover {
+	color: #FFF;
+}
+
+.navbar-xs .navbar-nav > li > a,
+.navbar-xs .navbar-nav > li > a:focus {
+	border-right: 1px solid #ddd;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	line-height: 16px
+}
+
+
+/*
+  Page and fixes
+*/
+.pagecontainer {
+	width: 98%;
+	margin: 40px auto 0;
+}
+
+/* fix for dropdowns */
+.dropdown-inline {
+	display: inline-block;
+}
+
+/* fix for TouchSpin */
+.input-group-sm .input-group-btn-vertical > .btn {
+	padding-top: 5px;
+	padding-bottom: 9px;
+}
+
+/* Bootstrap-standard of .3em looks ugly */
+.label {
+	padding-bottom: 0.2em;
+}
+
+.label-light {
+	background-color: #b4b4b4;
+	text-shadow: 0 0 3px #969696;
+}
+
+/* hotfix strange behavior of boostrap select plugin */
+.bootstrap-select {
+	margin-bottom: 0 !important;
+}
+
+.help-tip {
+	cursor: pointer;
+	color: #777;
+	display: none;
+	font-size: 1.2em;
+}
+
+.help-tip:hover {
+	color: #000;
+}
+
+/* Using an extra-class to display the tips avoids flickering when the javascript is not loaded. */
+.help-tip.ready {
+	display: inline-block;
+}
+
+.form-horizontal .help-tip {
+	padding-top: 5px;
+}
+
+.dropdown-menu > li.active small {
+	color: #fff;
+}
+
+
+/*
+  Loader and Overlay
+*/
+.pageloader-overlay {
+	background-color: rgba(0, 0, 0, 0.7);
+	display: none;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	-webkit-transition: opacity 0.15s linear 0s;
+	   -moz-transition: opacity 0.15s linear 0s;
+	     -o-transition: opacity 0.15s linear 0s;
+	        transition: opacity 0.15s linear 0s;
+	width: 100%;
+	z-index: 9999999;
+}
+
+.pageloader-loader {
+	background-color: #fff;
+	background-position: 4px 4px;
+	background-repeat: no-repeat;
+	border: 2px solid #ccc;
+	box-sizing: content-box;
+	height: 72px;
+	left: 50%;
+	margin-top: -36px;
+	margin-left: -36px;
+	position: relative;
+	top: 50%;
+	width: 72px;
+}

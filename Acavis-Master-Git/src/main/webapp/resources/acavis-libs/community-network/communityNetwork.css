@@ -1,0 +1,44 @@
+.communityNetwork {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.communityNetwork .node {
+	cursor: pointer;
+	stroke-width: 1.5px;
+}
+
+.communityNetwork .link {
+	stroke: #CCC;
+	stroke-width: 1px;
+}
+
+.communityNetwork .hull {
+	stroke-linejoin: round;
+	opacity: 0.5;
+}
+
+.communityNetwork .node-label {
+	cursor: pointer;
+	font: 9px sans-serif;
+	fill: #000;
+	stroke: none;
+	text-anchor: middle;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.communityNetwork  .node-label.hidden-label  {
+	display: none;
+}
+
+.communityNetwork  .node-label.hover  {
+	display: block;
+}
